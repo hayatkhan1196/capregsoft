@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import Profile from "./Profile";
-import Form from "./Form";
+
+import Getdata from './Getdata';
+
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
@@ -12,10 +14,11 @@ ReactDOM.render(
     {/* <App  text='functional components'/> */}
     <Router>
       <Link to="/"> profile </Link>
-      <Link to="/form"> form</Link>
-
+      
+      <Link to="/getdata"> getdata</Link>
       <Route exact path="/" component={Profile} />
-      <Route path="/form" component={Form} />
+    
+      <Route path="/getdata" component={Getdata} />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
